@@ -1,0 +1,57 @@
+@import '../Colors.css';
+
+.skills-section {
+  padding: 50px 20px;
+  background: var(--bg-light); /* light section background */
+  text-align: center;
+}
+
+.skills-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: var(--text-dark);
+}
+
+.skills-title span {
+  color: var(--primary);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background: #ffffff; /* lighter card background */
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* soft shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--text-dark); /* ensure text is readable */
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.skill-card i {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: var(--primary); /* icon color */
+}
+
+.skill-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--text-dark);
+}
+
+.skill-card p {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+}

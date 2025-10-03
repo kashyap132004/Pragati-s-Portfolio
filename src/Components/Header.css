@@ -1,0 +1,68 @@
+@import '../Colors.css';
+
+header {
+  width: 100%;
+  background-color: var(--bg-navbar);
+  color: var(--text-light);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.toggle-btn {
+  font-size: 24px;
+  background: transparent;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: var(--bg-navbar);
+  color: var(--text-light);
+  padding-top: 60px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 15px 20px;
+}
+
+.sidebar ul li button {
+  color: var(--text-light);
+  text-decoration: none;
+  display: block;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.sidebar ul li button:hover {
+  background-color: var(--highlight);
+}

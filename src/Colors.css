@@ -1,0 +1,41 @@
+:root {
+  --primary: #1abc9c;      /* Green for buttons and highlights */
+  --primary-dark: #16a085; /* Darker green for hover */
+  --bg-light: #ffffff;      /* Light background for sections */
+  --bg-navbar: #1abc9c;     /* Navbar green */
+  --text-dark: #333333;     /* Main text */
+  --text-light: #ffffff;    /* Light text for navbar/buttons */
+  --highlight: #16a085;     /* Hover highlight */
+  --border-color: var(--primary);  /* Green border for all sections */
+}
+
+
+
+
+body {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+}
+
+.navbar {
+  background-color: var(--bg-navbar);
+  color: var(--text-light);
+}
+
+button {
+  background-color: var(--primary);
+  color: var(--text-light);
+}
+
+button:hover {
+  background-color: var(--secondary);
+}
+.section-box {
+  padding: 40px;
+  margin: 20px auto;
+  max-width: 1200px; /* same width for all sections */
+  border: 2px solid #2ecc71; /* green border */
+  border-radius: 12px;
+  background-color: #ffffff; /* white background */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* subtle shadow for thickness effect */
+}
