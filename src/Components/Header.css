@@ -1,5 +1,7 @@
+/* Import your color variables */
 @import '../Colors.css';
 
+/* ===== HEADER BAR ===== */
 header {
   width: 100%;
   background-color: var(--bg-navbar);
@@ -8,25 +10,37 @@ header {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 20px;
+  gap: 15px;
   position: fixed;
   top: 0;
+  left: 0;
   z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+/* ===== TOGGLE BUTTON ===== */
 .toggle-btn {
   font-size: 24px;
   background: transparent;
   border: none;
   color: var(--text-light);
   cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
+.toggle-btn:hover {
+  transform: scale(1.1);
+}
+
+/* ===== TITLE ===== */
 header h1 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
+  color: var(--highlight);
+  margin: 0;
 }
 
+/* ===== SIDEBAR ===== */
 .sidebar {
   position: fixed;
   top: 0;
@@ -37,32 +51,68 @@ header h1 {
   color: var(--text-light);
   padding-top: 60px;
   transition: left 0.3s ease;
-  z-index: 1000;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.3);
 }
 
 .sidebar.open {
   left: 0;
 }
 
+/* ===== SIDEBAR LINKS ===== */
 .sidebar ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .sidebar ul li {
-  padding: 15px 20px;
+  padding: 12px 20px;
 }
 
 .sidebar ul li button {
   color: var(--text-light);
-  text-decoration: none;
-  display: block;
   background: none;
   border: none;
   font-size: 1rem;
+  text-align: left;
+  width: 100%;
   cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
 .sidebar ul li button:hover {
   background-color: var(--highlight);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+  header {
+    padding: 12px 15px;
+    justify-content: space-between;
+  }
+
+  header h1 {
+    font-size: 1rem;
+  }
+
+  .toggle-btn {
+    font-size: 22px;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  .sidebar {
+    width: 200px;
+    padding-top: 50px;
+  }
+
+  .sidebar ul li button {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
 }
